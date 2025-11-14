@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pete's Inn Homestay - Cochin | Comfortable Stay Near Airport</title>
+    <meta name="description" content="Pete's Inn Homestay - Experience authentic hospitality in Cochin. Located just 10 minutes from Cochin International Airport in Nedumbassery. Traditional rooms with modern amenities.">
+    <meta name="keywords" content="homestay cochin, pete's inn, nedumbassery accommodation, cochin airport hotel, traditional homestay kerala, cochin rooms">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #F9F6F1;
+            --text-color: #3D3326;
+            --primary-color: #D97328;
+            --accent-color: #6B9E7D;
+            --muted-color: #F1EDE5;
+            --border-color: #E8DCC8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+	.gallery-item img {
+   	    width: 100%;
+    	    height: 100%;
+    	    object-fit: cover;
+    	    border-radius: 0.75rem;
+	}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: 
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #7A6956;
+            margin-bottom: 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Quick Info */
+        .quick-info {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 3rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .info-item svg {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item h3 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-item p {
+            color: #7A6956;
+            font-size: 0.875rem;
+        }
+
+        /* Section */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #7A6956;
+            font-size: 1.125rem;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card svg {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #7A6956;
+        }
+
+        /* Rooms */
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .room-image {
+            aspect-ratio: 4 / 3; /* or 16/9 */
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+
+        .room-image svg {
+            width: 5rem;
+            height: 5rem;
+            color: var(--primary-color);
+        }
+
+        .room-content {
+            padding: 2rem;
+        }
+
+        .room-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .room-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .feature svg {
+            width: 1rem;
+            height: 1rem;
+            color: var(--primary-color);
+        }
+
+        .amenities-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+            color: #7A6956;
+        }
+
+        .amenities-list li:before {
+            content: "• ";
+            color: var(--primary-color);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(217, 115, 40, 0.2), rgba(107, 158, 125, 0.1));
+            border-radius: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item h4 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .gallery-item p {
+            font-size: 0.875rem;
+            color: #7A6956;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .contact-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card-header svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-card h3 {
+            font-size: 1.125rem;
+        }
+
+        .contact-content {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-subtitle {
+            color: #7A6956;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .timing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .timing-box {
+            background: var(--muted-color);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .timing-box p:first-child {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timing-box .time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #7A6956;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: #7A6956;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        .whatsapp-button svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.875rem;
+            }
+
+            .room-grid,
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-button {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-button svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🏡 Pete's Inn</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <img src="images/petesinn.png" alt="Pete's Inn Homestay" style="width:100%; max-height:400px; object-fit:cover;">
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" class="whatsapp-button">
+        <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <span class="badge">⭐ Government-Approved Diamond Category Homestay</span>
+            <h1>Welcome to Pete's Inn Homestay</h1>
+            <p>Experience authentic hospitality in Cochin's most convenient location</p>
+            <div class="btn-group">
+                <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Contact Us</a>
+                <a href="#rooms" class="btn btn-outline">View Rooms</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info -->
+    <div class="quick-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <h3>Perfect Location</h3>
+                    <p>10 min from Airport</p>
+                </div>
+                <div class="info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <h3>Flexible Timing</h3>
+                    <p>12 PM Check-in/out</p>
+                </div>
+                <div class="info-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <h3>Family Friendly</h3>
+                    <p>Perfect for families</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Amenities & Facilities</h2>
+                <p>Everything you need for a comfortable stay</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                    <h3>Free WiFi</h3>
+                    <p>High-speed internet</p>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
+                    <h3>Parking</h3>
+                    <p>Free parking space</p>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                    <h3>Kitchen</h3>
+                    <p>Shared & private options</p>
+                </div>
+                <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect width="20" height="12" x="2" y="6" rx="2"/></svg>
+                    <h3>Indoor Games</h3>
+                    <p>Entertainment area</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" style="background-color: var(--muted-color);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Rooms</h2>
+                <p>Choose from our comfortable and well-appointed rooms designed for your perfect stay</p>
+            </div>
+            <div class="room-grid">
+                <!-- Room 1 -->
+                <div class="room-card">
+                    <div class="room-image">
+                    <img src="images/tr_2(1).avif" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <div class="room-content">
+                        <h3>Traditional Room</h3>
+                        <p style="color: #7A6956; margin-bottom: 1rem;">Perfect for couples or small families</p>
+                        <div class="room-features">
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+                                <span>1 Queen Bed</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <span>Extra mattress available</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>
+                                <span>Attached bathroom</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                <span>Courtyard view</span>
+                            </div>
+                        </div>
+                        <h4 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">Amenities:</h4>
+                        <ul class="amenities-list">
+                            <li>Air conditioning</li>
+                            <li>Free WiFi</li>
+                            <li>Clean towels & linens</li>
+                            <li>TV</li>
+                            <li>Tea/coffee maker</li>
+                        </ul>
+                        <p style="font-size: 1.125rem; font-weight: 600; margin: 1.5rem 0 1rem;">Contact for pricing</p>
+                        <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Room 2 -->
+                <div class="room-card">
+                    <div class="room-image">
+                    <img src="images/tr_1(new).avif" style="width:100%; height:100%; object-fit:cover;">
+
+                    </div>
+                    <div class="room-content">
+                        <h3>Traditional Room with Kitchen</h3>
+                        <p style="color: #7A6956; margin-bottom: 1rem;">Ideal for extended stays with cooking facilities</p>
+                        <div class="room-features">
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+                                <span>1 Queen Bed</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+                                <span>Private kitchen</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/></svg>
+                                <span>Garden view</span>
+                            </div>
+                            <div class="feature">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6 6.5 3.5a1.5 1.5 0 0 0-1-.5C4.683 3 4 3.683 4 4.5V17a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><line x1="10" x2="8" y1="5" y2="7"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="7" x2="7" y1="19" y2="21"/><line x1="17" x2="17" y1="19" y2="21"/></svg>
+                                <span>Attached bathroom</span>
+                            </div>
+                        </div>
+                        <h4 style="font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">Amenities:</h4>
+                        <ul class="amenities-list">
+                            <li>Fully equipped kitchen</li>
+                            <li>Refrigerator</li>
+                            <li>Cooking utensils</li>
+                            <li>Air conditioning</li>
+                            <li>Free WiFi</li>
+                            <li>Garden access</li>
+                        </ul>
+                        <p style="font-size: 1.125rem; font-weight: 600; margin: 1.5rem 0 1rem;">Contact for pricing</p>
+                        <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">Enquire on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shared Spaces -->
+            <div style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 0.75rem; border: 1px solid var(--border-color);">
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 1.5rem;">Shared Spaces</h3>
+                <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--primary-color); font-weight: bold;">✓</span> Shared Kitchen - Cook your favorite meals</li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--primary-color); font-weight: bold;">✓</span> Shared Living Room - Relax and socialize</li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--primary-color); font-weight: bold;">✓</span> Lawn/Garden - Outdoor space for relaxation</li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--primary-color); font-weight: bold;">✓</span> Indoor Games Area - Entertainment for all ages</li>
+                    <li style="display: flex; align-items: center; gap: 0.5rem;"><span style="color: var(--primary-color); font-weight: bold;">✓</span> Free Parking - Secure parking available</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Gallery</h2>
+                <p>Explore our homestay through these images</p>
+            </div>
+
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+		    <img src="images/front.jpg">
+                    <h4>Exterior View</h4>
+                    <p>Property</p>
+                </div>
+
+                <div class="gallery-item">
+		    <img src="images/tr_1(new).avif">
+                    <h4>Traditional Room</h4>
+                    <p>Rooms</p>
+                </div>
+                <div class="gallery-item">
+		    <img src="images/kitchen.jpg">
+                    <h4>Kitchen Facility</h4>
+                    <p>Amenities</p>
+                </div>
+                <div class="gallery-item">
+		    <img src="images/living_room.avif">
+                    <h4>Living Room</h4>
+                    <p>Common Areas</p>
+                </div>
+                <div class="gallery-item">
+		    <img src="images/courtyard.avif">
+                    <h4>Courtyard</h4>
+                    <p>Outdoor</p>
+                </div>
+
+                <div class="gallery-item">
+		    <img src="images/bathroom2.avif">
+                    <h4>Bathroom</h4>
+                    <p>Rooms</p>
+                </div>
+            </div>
+            <div style="margin-top: 3rem; text-align: center;">
+                <p style="color: #7A6956; margin-bottom: 1rem;">Want to see more? Contact us for additional photos and virtual tours.</p>
+                <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">WhatsApp us for more images →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--muted-color);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We're here to help you plan your perfect stay</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <h3>Location</h3>
+                    </div>
+                    <div class="contact-content">Petes Inn, Areeckal House (MRA 14 B), Meckave, Nedumbassery</div>
+                    <div class="contact-subtitle">10 minutes from Cochin International Airport</div>
+                    <a href="https://maps.app.goo.gl/VnEwH6jmeFNoxXRq7" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">Get Directions</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <h3>Phone</h3>
+                    </div>
+                    <div class="contact-content">+91 90612 93580</div>
+                    <div class="contact-subtitle">Call us anytime</div>
+                    <a href="tel:+919061293580" class="btn btn-primary" style="width: 100%; text-align: center;">Call Now</a>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <h3>WhatsApp</h3>
+                    </div>
+                    <div class="contact-content">+91 90612 93580</div>
+                    <div class="contact-subtitle">Chat with us instantly</div>
+                    <a href="https://wa.me/919061293580" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">WhatsApp Us</a>
+                </div>
+		<div class="contact-card">
+    			<div class="contact-card-header">
+        			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+            			stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            			<path d="M3 3h18v4H3z"/>
+            			<path d="M3 7h18v14H3z"/>
+            			<path d="M8 3v4"/>
+            			<path d="M16 3v4"/>
+        			</svg>
+        		<h3>Book Now</h3>
+   		 </div>
+    			<div class="contact-content">Reserve your stay instantly</div>
+    				<div class="contact-subtitle">Real-time availability</div>
+    				<a href="https://www.airbnb.co.in/rooms/32300689?source_impression_id=p3_1763121629_P3XX2f3ctn-Z9059" target="_blank" 
+        			rel="noopener noreferrer" class="btn btn-primary" 
+        			style="width: 100%; text-align: center;">
+        			Book Your Stay
+   	 			</a>
+			</div>
+
+
+                <div class="contact-card">
+                    <div class="contact-card-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <h3>Email</h3>
+                    </div>
+                    <div class="contact-content">info@petesinn.com</div>
+                    <div class="contact-subtitle">We'll respond within 24 hours</div>
+                    <a href="mailto:info@petesinn.com" class="btn btn-primary" style="width: 100%; text-align: center;">Send Email</a>
+                </div>
+            </div>
+
+            <!-- Check-in Times -->
+            <div class="card" style="margin-bottom: 3rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom: 1rem;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <h3 style="margin-bottom: 1.5rem;">Check-in & Check-out Times</h3>
+                <div class="timing-grid">
+                    <div class="timing-box">
+                        <p>Check-in</p>
+                        <p class="time">12:00 PM</p>
+                    </div>
+                    <div class="timing-box">
+                        <p>Check-out</p>
+                        <p class="time">12:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="card">
+                <h3 style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                    Find Us
+                </h3>
+                <p style="color: #7A6956; margin-bottom: 1rem;">Click on the map below to open in Google Maps and get directions</p>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.756!2d76.401!3d10.148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA4JzUyLjgiTiA3NsKwMjQnMDMuNiJF!5e0!3m2!1sen!2sin!4v1234567890123"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏡 Pete's Inn Homestay</h3>
+                    <p>Experience authentic hospitality in Cochin's most convenient location near the airport.</p>
+                    <p style="margin-top: 1rem;">⭐ 4.8 Rating</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#rooms">Rooms</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Petes Inn, Areeckal House (MRA 14 B), Meckave, Nedumbassery,Cochin,Kerala 683572</p>
+                    <p>📞 +91 90612 93580</p>
+                    <p>✉️ info@petesinn.com</p>
+                    <a href="https://maps.app.goo.gl/VnEwH6jmeFNoxXRq7" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Operating Hours</h3>
+                    <p>Check-in: 12:00 PM</p>
+                    <p>Check-out: 12:00 PM</p>
+                    <p style="margin-top: 1rem;">Available 24/7 for inquiries via WhatsApp</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Pete's Inn Homestay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
